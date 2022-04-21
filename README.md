@@ -1,8 +1,12 @@
 # Super Schedule
  5046 project
  
+ 多人协作的方案就根据这个[博客](https://www.liaoxuefeng.com/wiki/896043488029600/900375748016320)说的来
  
+ 首先远程库会有main
  
+
+
 # Task Allocation
 
 ## Zixuan Huang
