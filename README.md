@@ -6,7 +6,7 @@
  首先远程库会有master，dev分支。我们开发就在dev分支上进行，每个人clone到本地后创建自己的feature分支在上面进行开发，开发的差不多了就merge进dev分支然后pull到远程库上。然后由于我们开始的状态下没什么东西，只要保证dev分支的下的app能打开，页面都能显示就行，新做好了什么东西都可以丢上去。然后自己的feature分支就算没完全开发好最好也pull到远程，让别人都有个参考。
  而master分支就是开发到比较完整的时候会更新。
 
-
+screen的设计我还是照搬了之前的文档，如果要修改的话负责界面设计这部分的人自己去改成新的样式
 # Task Allocation
 
 ## Zixuan Huang
@@ -111,7 +111,7 @@
 
       8. 返回-Button->(3)
 
-## 主页（Dashboard）
+## 主页（Dashboard）(3)
 
        1. Fragment1
 
@@ -133,7 +133,7 @@
 
        3. [导航边栏]
 
-## 日历页
+## 日历页(4)
 
        1. Fragment1
 
@@ -176,105 +176,103 @@
        3.[导航边栏]
 
 
-## 地图页面
+## 地图页面(5)
 
-1、 经纬度显示-TextView
+       1、 经纬度显示-TextView
 
-2、 地图显示-?
+       2、 地图显示-?
 
-3、 位置记录（时间，经纬度记录）-Fragment
+       3、 位置记录（时间，经纬度记录）-Fragment
 
-1. 时间-TextView、
+           3.1. 时间-TextView、
 
-2. 经纬度-TextView
+           3.2. 经纬度-TextView
 
-3. 地点名称-TextView
+           3.3. 地点名称-TextView
 
-4、 共享位置-Button->弹窗选择共享群组
+       4、 共享位置-Button->弹窗选择共享群组
 
-5、 查看（查看某群组内已共享的位置）-Button->弹窗查看某群组位置
+       5、 查看（查看某群组内已共享的位置）-Button->弹窗查看某群组位置
 
-6、 [导航边栏]
+       6、 [导航边栏]
 
-6. 日程编辑页
+## 日程编辑页(6)
 
-a. 日程名称-EditView
+       1. 日程名称-EditView
 
-b. 时间-DatePicker，TimePicker
+       2. 时间-DatePicker，TimePicker
 
-c. 是否提醒-ToggleButton
+       3. 是否提醒-ToggleButton
 
-d. 所属群组: -Spinner
+       4. 所属群组: -Spinner
+          [个人日程表，群组A，群组B...]
 
+       5. 地点-?
 
-[个人日程表，群组A，群组B...]
+          5.1. 地点选择--Button->进入地图页(5)->选择地点-->返回位置
 
-e. 地点-?
+          5.2. 地点手动输入--EditView
 
-i. 地点选择--Button->进入地图页(5)->选择地点-->返回位置
+       6. 取消-Button
 
-ii. 地点手动输入--EditView
+       7. 确认-Button
 
-f. 取消-Button
+       （使用LIveData，当按下确认按钮时，新编辑的日程被同步到该用户的日程，当按下取消按钮时，用户退出编辑）
 
-g. 确认-Button
+## 导航边栏(Navigation Drawer)(7)
 
-（使用LIveData，当按下确认按钮时，新编辑的日程被同步到该用户的日程，当按下取消按钮时，用户退出编辑）
+      1. 用户头像--ImageButton ->[文件选择]
 
-## 导航边栏(Navigation Drawer)
+      2. 用户名（已登录状态）--TextView->（2）用户信息页  / 
 
-1. 用户头像--ImageButton ->[文件选择]
+      登陆(未登录状态)--Button>（1）
 
-2. 用户名（已登录状态）--TextView->（2）用户信息页  / 
+      3.用文字显示当前地理位置--TextView->（5）
 
-登陆(未登录状态)--Button>（1）
+      4.列出n个最常查看的日历表-ListView
 
-3.用文字显示当前地理位置--TextView->（5）
+        4.1. 个人日程表a   -Button->(4)
 
-4.列出n个最常查看的日历表-ListView
+        4.2. 来自群组a   -Button->(4)
 
-a. 个人日程表a   -Button->(4)
+        4. ...
 
-b. 来自群组xx-b   -Button->(4)
+      5.切换用户-Button->(1)
 
-c. ...
-
-5.切换用户-Button->(1)
-
-6.登出-Button
+      6.登出-Button
 
 
-## 群组页
+## 群组页(8)
 
-1. 共享日程表名-EditView（Owner 可编辑）
+    1. 共享日程表名-EditView（Owner 可编辑）
 
-2. 你的权限等级--Spinner（Owner ：可修改成员权限，踢出成员
+    2. 你的权限等级--Spinner（Owner ：可修改成员权限，踢出成员
 
-/Editor ：可发布编辑删除日程
+                            /Editor ：可发布编辑删除日程
 
-/Viewer：可查看日程）
+                            /Viewer：可查看日程）
 
-3. 生成加入链接（url？/二维码？/数字串？）-Button->弹出窗口
+    3. 生成加入链接（url？/二维码？/数字串？）-Button->弹出窗口
 
-4. 成员表-RecyclerView
+    4. 成员表-RecyclerView
 
-1. 成员A-CardView
+       4.1. 成员A-CardView
 
-1.成员名称-TextView
+             4.1.1.成员名称-TextView
 
-2.权限等级-Spinner(Owner可编辑)
+             4.1.2.权限等级-Spinner(Owner可编辑)
 
-3.移除--Button（Owner 可选）
+             4.1.3.移除--Button（Owner 可选）
 
-2. 成员B
+       4.2. 成员B
 
-3. ...
+       3. ...
 
-5. 返回--Button->(4)
+    5. 返回--Button->(4)
 
-6. 共享位置-ToggleButton
+    6. 共享位置-ToggleButton
 
-7. 查看成员位置--Button->(5)
+    7. 查看成员位置--Button->(5)
 
 # Functions
 ========================================================
