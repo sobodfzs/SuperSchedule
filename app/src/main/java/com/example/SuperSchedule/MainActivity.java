@@ -1,4 +1,4 @@
-package com.example.roomjava;
+package com.example.SuperSchedule;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,9 +8,9 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.roomjava.databinding.ActivityMainBinding;
-import com.example.roomjava.entity.Customer;
-import com.example.roomjava.viewmodel.CustomerViewModel;
+import com.example.SuperSchedule.databinding.ActivityMainBinding;
+import com.example.SuperSchedule.entity.Customer;
+import com.example.SuperSchedule.viewmodel.CustomerViewModel;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

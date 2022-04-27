@@ -1,4 +1,4 @@
-package com.example.roomjava.dao;
+package com.example.SuperSchedule.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.roomjava.entity.Customer;
+import com.example.SuperSchedule.entity.Customer;
 
 import java.util.List;
 

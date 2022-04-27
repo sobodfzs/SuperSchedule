@@ -1,4 +1,4 @@
-package com.example.roomjava.repository;
+package com.example.SuperSchedule.repository;
 
 import android.app.Application;
 import android.os.Build;
@@ -6,9 +6,9 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 import androidx.lifecycle.LiveData;
 
-import com.example.roomjava.dao.CustomerDAO;
-import com.example.roomjava.database.CustomerDatabase;
-import com.example.roomjava.entity.Customer;
+import com.example.SuperSchedule.dao.CustomerDAO;
+import com.example.SuperSchedule.database.CustomerDatabase;
+import com.example.SuperSchedule.entity.Customer;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

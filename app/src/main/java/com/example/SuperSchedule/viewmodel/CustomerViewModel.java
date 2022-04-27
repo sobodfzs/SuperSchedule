@@ -1,4 +1,4 @@
-package com.example.roomjava.viewmodel;
+package com.example.SuperSchedule.viewmodel;
 
 import android.app.Application;
 import android.os.Build;
@@ -7,8 +7,8 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.roomjava.entity.Customer;
-import com.example.roomjava.repository.CustomerRepository;
+import com.example.SuperSchedule.entity.Customer;
+import com.example.SuperSchedule.repository.CustomerRepository;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

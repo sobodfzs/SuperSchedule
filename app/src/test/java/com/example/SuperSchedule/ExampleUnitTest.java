@@ -1,4 +1,4 @@
-package com.example.roomjava;
+package com.example.SuperSchedule;
 
 import org.junit.Test;
 

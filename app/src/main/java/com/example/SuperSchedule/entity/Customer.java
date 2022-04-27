@@ -1,4 +1,4 @@
-package com.example.roomjava.entity;
+package com.example.SuperSchedule.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

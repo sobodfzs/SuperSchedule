@@ -1,4 +1,4 @@
-package com.example.roomjava.database;
+package com.example.SuperSchedule.database;
 
 import android.content.Context;
 
@@ -6,8 +6,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.roomjava.dao.CustomerDAO;
-import com.example.roomjava.entity.Customer;
+import com.example.SuperSchedule.dao.CustomerDAO;
+import com.example.SuperSchedule.entity.Customer;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
