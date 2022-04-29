@@ -37,6 +37,8 @@ screen的设计我还是照搬了之前的文档，如果要修改的话负责�
 
     UI Controller development
 
+    Navigation Drawer
+
     App testing
 
     Respository layer
@@ -70,9 +72,7 @@ screen的设计我还是照搬了之前的文档，如果要修改的话负责�
     Calendar&Events screen
 
     shared calendar function
-
-    Navigation Drawer
-
+    
     ViewModel-Livedata
 
 
