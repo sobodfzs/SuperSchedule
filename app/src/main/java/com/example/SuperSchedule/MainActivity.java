@@ -1,16 +1,21 @@
 package com.example.SuperSchedule;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.SuperSchedule.databinding.ActivityMainBinding;
 import com.example.SuperSchedule.entity.Customer;
 import com.example.SuperSchedule.viewmodel.CustomerViewModel;
+import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
+import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -42,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                         binding.textViewRead.setText("All data: " + allCustomers);
                     }
                 });
+        binding.loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(LoginActivity.createIntent(MainActivity.this));
+            } });
         binding.addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String name=
