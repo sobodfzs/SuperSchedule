@@ -57,13 +57,13 @@
     Event editor screen
 
     Events Alarming function
-
-    Report writing
 ## Yukun Ding
 
     Key components assigning,a few screens designing 
 
     Map screen &function
+    
+    Report Screen
 
     Group screen
 
