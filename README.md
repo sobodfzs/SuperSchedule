@@ -56,16 +56,16 @@ screen的设计我还是照搬了之前的文档，如果要修改的话负责�
 
     Events Alarming function
 
-    Report writing
+    Group Screen
+    
+    group manager functions
 ## Yukun Ding
 
     Key components assigning,a few screens designing 
 
     Map screen &function
-
-    Group screen
-
-    group manager functions
+    
+    Report Screen
 
     Calendar&Events screen
 
