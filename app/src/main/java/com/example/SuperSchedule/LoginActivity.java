@@ -5,13 +5,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.SuperSchedule.databinding.ActivityMainBinding;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
@@ -20,6 +23,7 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
 import com.firebase.ui.auth.util.ExtraConstants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,6 +33,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
     @NonNull
     public static Intent createIntent(@NonNull Context context) {
         return new Intent(context, LoginActivity.class);
@@ -49,9 +54,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+
         setContentView(R.layout.activity_firebase_ui);
         createSignInIntent();
-
+        finish();
         return;
     }
 
@@ -84,11 +91,12 @@ public class LoginActivity extends AppCompatActivity {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             // ...
         } else {
+            response.getError().getErrorCode();
             // Sign in failed. If response is null the user canceled the
             // sign-in flow using the back button. Otherwise check
             // response.getError().getErrorCode() and handle the error.
             // ...
-            //handleSignInResponse(result.getResultCode(), response);
+            handleSignInResponse(result.getResultCode(), response);
 
 
         }
@@ -195,4 +203,37 @@ public class LoginActivity extends AppCompatActivity {
         }
         // [END auth_fui_email_link_catch]
     }
+    private void handleSignInResponse(int resultCode, @Nullable IdpResponse response) {
+        // Successfully signed in
+        if (resultCode == RESULT_OK) {
+            showSnackbar(R.string.signed_in_header);
+            return;
+        } else {
+            // Sign in failed
+            if (response == null) {
+                // User pressed back button
+                showSnackbar(R.string.sign_in_cancelled);
+                return;
+            }
+
+            if (response.getError().getErrorCode() == ErrorCodes.NO_NETWORK) {
+                showSnackbar(R.string.no_internet_connection);
+                return;
+            }
+
+
+            if (response.getError().getErrorCode() == ErrorCodes.ERROR_USER_DISABLED) {
+                showSnackbar(R.string.account_disabled);
+                return;
+            }
+
+            showSnackbar(R.string.unknown_error);
+            Log.e("LoginActivity", "Sign-in error: ", response.getError());
+        }
+    }
+    private void showSnackbar(@StringRes int errorMessageRes) {
+        Snackbar.make(binding.getRoot(), errorMessageRes, Snackbar.LENGTH_LONG).show();
+    }
+
 }
+
