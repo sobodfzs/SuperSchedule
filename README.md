@@ -24,6 +24,10 @@
     Firebase Realtime database development
     
     Room development
+    
+    Sign in screen
+
+    Sign up screen
 
 ## Zhenxiao Yu
 
@@ -50,9 +54,6 @@
 
     Main screen
 
-    Sign in screen
-
-    Sign up screen
 
     Event editor screen
 
