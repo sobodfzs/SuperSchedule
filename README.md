@@ -58,6 +58,10 @@
 
     Events Alarming function
 
+    Group Screen
+    
+    group manager functions
+
 ## Yukun Ding
 
     Key components assigning,a few screens designing 
@@ -66,9 +70,7 @@
     
     Report Screen
 
-    Group screen
-
-    group manager functions
+    Report Screen
 
     Calendar&Events screen
 
