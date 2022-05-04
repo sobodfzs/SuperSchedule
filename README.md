@@ -62,11 +62,14 @@
     Group Screen
     
     group manager functions
+
 ## Yukun Ding
 
     Key components assigning,a few screens designing 
 
     Map screen &function
+    
+    Report Screen
 
     Report Screen
 
