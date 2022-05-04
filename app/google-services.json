@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "827529875131",
+    "project_id": "assignment-calendar-98dde",
+    "storage_bucket": "assignment-calendar-98dde.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827529875131:android:06e56c3749c24e5b0e239e",
+        "android_client_info": {
+          "package_name": "com.example.SuperSchedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827529875131-cjsdsog0noieckntdk8hbnof3jmieiv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBubHHoXjd5uw3Kg5uXJ8PK8LvrWCTdv9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827529875131-cjsdsog0noieckntdk8hbnof3jmieiv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
