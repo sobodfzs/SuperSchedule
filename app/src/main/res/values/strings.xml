@@ -6,8 +6,11 @@
     <string name="delete_account_label">Delete account</string>
 
     <string name="sign_in_failed">Sign in failed</string>
+    <string name="sign_in_success">Sign in success</string>
     <string name="sign_out_failed">Sign out failed</string>
+    <string name="sign_out_success">Sign out success</string>
     <string name="delete_account_failed">Delete account failed</string>
+    <string name="delete_account_success">Delete account success</string>
 
     <string name="user_profile_header">User profile:</string>
     <string name="profile_picture_content_desc">Profile picture</string>

@@ -57,16 +57,11 @@ dependencies {
     // [START gradle_firebase_ui_auth]
     implementation "com.firebaseui:firebase-ui-auth:8.0.1"
 
-    // Required only if Facebook login support is required
-    // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
-    implementation "com.facebook.android:facebook-android-sdk:13.2.0"
+
     // [END gradle_firebase_ui_auth]
 
     implementation 'com.firebaseui:firebase-ui-auth:8.0.1'
 
-    // Required only if Facebook login support is required
-    // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
-    implementation 'com.facebook.android:facebook-android-sdk:13.2.0'
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:29.3.1')
 

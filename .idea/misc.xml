@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/Android/SuperSchedule/app/src/main/res/drawable-v24/ic_anon_user_48dp.xml" value="0.1265" />
         <entry key="..\:/Github/Android/SuperSchedule/app/src/main/res/layout/activity_firebase_ui.xml" value="0.17806484295845998" />
         <entry key="..\:/Github/Android/SuperSchedule/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
       </map>
