@@ -7,6 +7,10 @@
  而master分支就是开发到比较完整的时候会更新。
 
  screen的设计我还是照搬了之前的文档，如果要修改的话负责界面设计这部分的人自己去改成新的样式
+ 
+ 因为网络功能都得连到google，所以要用这些功能都必须要翻墙才行。
+如果用的代理的话，android 虚拟机和主机是在同一个局域网里的，在Android模拟器里面，搜setting->Network&internet->internet->长按 android Wifi(未连接状态)->modify 里面设置代理就行了。ip填主机的局域网ip，端口填代理端口就行
+ 
 # Task Allocation
 
 ## Zixuan Huang
