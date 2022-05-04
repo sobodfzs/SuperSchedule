@@ -72,8 +72,6 @@
     Key components assigning,a few screens designing 
 
     Map screen &function
-    
-    Report Screen
 
     Report Screen
 
